@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<!--
+<div class="container">
+<p-card class="card" header="Beginner Weightlifting" subheader="*No Experience" [style]="{ width: '360px' }">
+    <ng-template pTemplate="header">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Y26S5wnBWqg" frameborder="0" 
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </ng-template>
+    <p>
+        This Program will take anyone from zero expertise or mobiltiy through a complete program that will have them
+        weightlifting properly at a beginner to intermediate level.
+        4 weeks (6-7 days a week)
+        Longer if schedule is to tight, we recommend approaching this as often and light as possible, more reps
+        = more skills training. Lift not to get sore, avoid training chest, or biceps throughout this entry level program
+        
+    </p>
+    <ng-template pTemplate="footer">
+        <p-button (click)="onWeightlifting()" styleClass="p-button-success" label="Begin" icon="pi pi-check"></p-button>
+    </ng-template>
+</p-card>
+
+<p-card class="card" header="Beginner Powerlifting" subheader="*No Experience" [style]="{ width: '360px' }">
+    <ng-template pTemplate="header">
+        <source src="https://www.youtube.com/embed/Adm9sGs_nUw" type="video/mp4"><iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/Adm9sGs_nUw" 
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></ng-template>
+    <p>
+       You will focus on the higher end rep ranges of powerlifting to practice a moderately heavy
+       approach to the key lifts. This will include the proper techniques that are specific to the sport.
+       Sumo deadlift provides the best leverage, as well as lowbar and a pause bench press that will be
+       conducted in competition. If you are new to powerlifting, you should see a substantial increase in all
+       key lifts and you will be able to begin a more advanced program.
+        
+    </p>
+    <ng-template pTemplate="footer">
+        <p-button styleClass="p-button-success" label="Begin" icon="pi pi-check"></p-button>
+    </ng-template>
+</p-card>
+<p-card class="card" header="Beginner Bodybuilding" subheader="*No Experience" [style]="{ width: '360px' }">
+    <ng-template pTemplate="header">
+        <source src="https://www.youtube.com/watch?v=o9zCgPtsups" type="video/mp4"><iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/o9zCgPtsups" 
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></ng-template>
+    <p>
+        This Program will take anyone from zero expertise or mobiltiy through a complete program that will have them
+        weightlifting properly at a beginner to intermediate level.
+        4 weeks (6-7 days a week)
+        Longer if schedule is to tight, we recommend approaching this as often and light as possible, more reps
+        = more skills training. Lift not to get sore, avoid training chest, or biceps throughout this entry level program
+        
+    </p>
+    <ng-template pTemplate="footer">
+        <p-button styleClass="p-button-success" label="Begin" icon="pi pi-check"></p-button>
+    </ng-template>
+</p-card>
+    -->
+<div class="container">
+    <p-card *ngFor="let workout of workouts" class="card" [style]="{ width: '360px' }">
+      <ng-template pTemplate="header">
+        <iframe width="100%" height="315" [src]="sanitizeVideoUrl(workout.video)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </ng-template>
+      <ng-template pTemplate="body">
+        <h3>{{ workout.name }}</h3>
+        <p>{{ workout.description }}</p>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <p-button (click)="onSelect(workout._id)" styleClass="p-button-success" label="Begin" icon="pi pi-check"></p-button>
+      </ng-template>
+    </p-card>
+  </div>
+
+
+
+    -->
