@@ -1,3 +1,5 @@
+// program.schema.ts
+
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { Workout } from './workout.schema';
@@ -16,7 +18,7 @@ export class Program extends Document {
   @Prop()
   description: string;
 
-  @Prop({ type: [{ type: Types.ObjectId, ref: Workout.name }] })
+  @Prop([{ type: Types.ObjectId, ref: 'Workout' }])
   workouts: Workout[];
 }
 

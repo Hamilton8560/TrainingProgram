@@ -1,4 +1,6 @@
-export class CreateWorkoutDto {
+// update-workout.dto.ts
+
+export class UpdateWorkoutDto {
   readonly name?: string;
   readonly reps?: number[];
   readonly sets?: number;
