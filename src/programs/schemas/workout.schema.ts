@@ -1,7 +1,5 @@
-// workout.schema.ts
-
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 
 @Schema()
 export class Workout extends Document {
@@ -22,6 +20,10 @@ export class Workout extends Document {
 
   @Prop(Number)
   day: number;
+
+  @Prop()
+  programId: string; // Add the program ID property
 }
 
 export const WorkoutSchema = SchemaFactory.createForClass(Workout);
+

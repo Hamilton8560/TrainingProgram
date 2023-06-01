@@ -1,5 +1,4 @@
 // update-workout.dto.ts
-
 export class UpdateWorkoutDto {
   readonly name?: string;
   readonly reps?: number[];
@@ -7,4 +6,5 @@ export class UpdateWorkoutDto {
   readonly date?: Date;
   readonly weight?: number[];
   readonly day?: number;
+  readonly programId?: string; // Add the program ID property
 }

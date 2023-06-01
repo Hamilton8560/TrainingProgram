@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import { Workout } from './workout.schema';
+
 
 @Schema()
 export class Program extends Document {
@@ -18,8 +18,6 @@ export class Program extends Document {
   @Prop()
   description: string;
 
-  @Prop([{ type: Types.ObjectId, ref: 'Workout' }])
-  workouts: Workout[];
 }
 
 export const ProgramSchema = SchemaFactory.createForClass(Program);
